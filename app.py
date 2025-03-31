@@ -1,9 +1,21 @@
 import PyPDF2
 import os
+import tkinter as tk
+from tkinter import filedialog
+
+
+def browse_files():
+    root = tk.Tk()
+    root.withdraw()  # Hide main window
+    files_selected = filedialog.askopenfilenames(
+        title="Select PDF Files",
+        filetypes=[("PDF Files", "*.pdf")],  # Show only PDFs
+    )
+    return files_selected
 
 
 def split_pdf(input_pdf, output_files):
-    os.makedirs(output_folder, exist_ok=True)
+    os.makedirs(output_files, exist_ok=True)
     with open(input_pdf, "rb") as file:
         reader = PyPDF2.PdfReader(file)
         for i in range(len(reader.pages)):
@@ -14,22 +26,33 @@ def split_pdf(input_pdf, output_files):
                 writer.write(output_pdf)
 
 
-def merge_pdfs(input_folder, output_pdf):
+def merge_pdfs(pdf_files, output_pdf):
     writer = PyPDF2.PdfWriter()
 
-    # Get all PDFs from the folder
-    pdf_files = [os.path.join(input_folder, f) for f in os.listdir(input_folder) if f.endswith(".pdf")]
+    if not pdf_files:
+        print("No PDF files provided.")
+        return
 
-    # Sort files to maintain order
+    print(f"PDFs selected: {pdf_files}")  # Debugging output
+
+    # Ensure output folder exists
+    os.makedirs(os.path.dirname(output_pdf), exist_ok=True)
+
+    # Merge PDFs
     for pdf in sorted(pdf_files):
-        with open(pdf, "rb") as file:
-            reader = PyPDF2.PdfReader(file)
-            for page in reader.pages:
-                writer.add_page(page)
+        try:
+            with open(pdf, "rb") as file:
+                reader = PyPDF2.PdfReader(file)
+                for page in reader.pages:
+                    writer.add_page(page)
+        except Exception as e:
+            print(f"Error opening {pdf}: {e}")
 
-    # Write merged PDF to output file
+    # Save merged PDF
     with open(output_pdf, "wb") as output_file:
         writer.write(output_file)
+
+    print(f"Merged PDF saved as: {output_pdf}")
 
 
 def add_watermark(input_pdf, watermark_pdf, output_pdf):
@@ -46,14 +69,13 @@ def add_watermark(input_pdf, watermark_pdf, output_pdf):
 
 
 if __name__ == "__main__":
-    input_folder = "input_folder"
-    output_folder = "output"
-    split_folder = os.path.join(output_folder, "split")
-    merged_pdf = os.path.join(output_folder, "merged.pdf")
-    watermarked_pdf = os.path.join(output_folder, "watermarked.pdf")
+    pdf_files = browse_files()  # Select PDFs manually
+    if not pdf_files:
+        print("No PDFs selected. Exiting...")
+        exit()
 
-    # Example Usage
-    # split_pdf(os.path.join(input_folder, "sample.pdf"), split_folder)
-    merge_pdfs("input_folder", "output_pdfs/Birth_Certificate_Amairah.pdf")
-    # add_watermark(os.path.join(input_folder, "sample.pdf"), os.path.join(input_folder, "watermark.pdf"),
-                  # watermarked_pdf)
+    output_folder = "output"
+    os.makedirs(output_folder, exist_ok=True)
+    merged_pdf = os.path.join(output_folder, "merged.pdf")
+
+    merge_pdfs(pdf_files, merged_pdf)  # Pass list of files instead of a folder
