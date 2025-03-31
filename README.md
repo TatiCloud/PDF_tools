@@ -9,3 +9,14 @@ Merge PDFs: Combine multiple PDFs into a single document.
 Add Watermark: Apply a watermark to one or more pages of a PDF.
 
 Simple GUI Integration: Browse folders and select files using Tkinter dialogs.
+## Installation
+Prerequisites
+Python 3.x
+
+PyPDF2 and tkinter libraries (for PDF manipulation and file dialogs)
+
+Steps to Install:
+Clone the repository:
+'''sh
+git clone https://github.com/your-username/pdf-tools.git
+cd pdf-tools
