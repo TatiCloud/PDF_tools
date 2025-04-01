@@ -17,6 +17,5 @@ PyPDF2 and tkinter libraries (for PDF manipulation and file dialogs)
 ### Steps to Install:
 
 Clone the repository:
-'''sh
-git clone https://github.com/your-username/pdf-tools.git
+'''git clone https://github.com/your-username/pdf-tools.git
 cd pdf-tools
