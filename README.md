@@ -50,7 +50,7 @@ pip install -r requirements.txt
 ## :handshake: Contributing
 ## :email: Contact
 
-For any questions or suggestions, reach out.
+Follow me on 
 
 - ##### Email:     info.taticloud@gmail.com
 - ##### Website:   www.taticloud.com
