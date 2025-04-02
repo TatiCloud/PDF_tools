@@ -1,11 +1,9 @@
 # **Welcome to PDF_tools with Tati's Cloud Hub**
 
-## :pushpin:**Introduction**
-Welcome to PDF Tools, a Python-based utility set designed for seamless PDF document manipulation. Whether you need to split, merge, or watermark PDFs, this tool simplifies the process and automates repetitive PDF tasks.
-With an intuitive interface and straightforward execution, PDF Tools is ideal for users looking to manage their PDF workflows efficiently and programmatically.
-
+## :pushpin:**Overview**
+Welcome to PDF Tools, a Python-based utility toolkit for seamless PDF document manipulation. Whether you need to split, merge, or watermark PDFs, this tool simplifies the process and automates repetitive PDF tasks. With an intuitive interface and straightforward execution, PDF Tools is ideal for users who want to manage their PDF workflows efficiently and programmatically.
 ## :lock: Privacy First
-In just a few steps, you can run PDF Tools locally on your PC, ensuring that your personal documents remain private. Unlike online tools that require uploading files to external servers, this application processes everything offline, preventing any risk of sharing sensitive data.
+In just a few steps, you can run PDF Tools locally on your PC, ensuring that your documents remain private. Unlike online tools that require uploading files to external servers, this application processes everything offline, preventing any risk of sharing sensitive data for free.
 
 ## :rocket: Features
 
@@ -33,11 +31,13 @@ Ensure you have the following installed:
 #### 1. Clone the Repository:
 
 ```
-git clone https://github.com/your-username/pdf-tools.git
-cd pdf-tools
+git clone https://github.com/TatiCloud/PDF_tools.git
 
 ```
+```
+cd PDF_tools
 
+```
 #### 2. Install Dependencies:
 
 ```
@@ -46,6 +46,12 @@ pip install -r requirements.txt
 ```
 
 ## :book: Usage 
+### Running the Tool
+
+Execute the script to launch the interface or use command-line arguments for automation:
+```commandline
+python3 app.py
+```
 
 ## :handshake: Contributing
 ## :email: Contact
