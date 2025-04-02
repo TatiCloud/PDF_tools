@@ -54,15 +54,15 @@ python3 app.py
 ```
 
 ## :handshake: Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests to enhance the tool.
+
 ## :email: Contact
 
-Follow me on 
+Follow me on: 
 
 - ##### Email:     info.taticloud@gmail.com
 - ##### Website:   www.taticloud.com
 - ##### LinkedIn: https://www.linkedin.com/in/tatiana-timonina-23081a309
-
-Follow us on our journey as we continue to push the boundaries of what's possible with PDF technology.
 
 Happy PDF processing! 🎉
 
