@@ -1,5 +1,17 @@
 # **Welcome to PDF_tools with Tati's Cloud Hub**
 
+<div style="text-align: center;">
+  <!-- Logo -->
+  <img src="https://github.com/TatiCloud/PDF_tools/blob/main/assets/Tati_Cloud_Hub_logo.png" alt="TatiCloud Hub Logo" width="150"/>
+
+  <!-- Links below the logo -->
+  <div style="margin-top: 20px;">
+    <a href="https://github.com/TatiCloud/PDF_tools" target="_blank">GitHub Repository</a><br/>
+    <a href="https://twitter.com/TatiCloud" target="_blank">Follow us on Twitter</a><br/>
+    <a href="https://www.taticloudhub.com" target="_blank">:globe_with_meridians:Visit our Website</a>
+  </div>
+</div>
+
 ## :pushpin:**Overview**
 Welcome to PDF Tools, a Python-based utility toolkit for seamless PDF document manipulation. Whether you need to split, merge, or watermark PDFs, this tool simplifies the process and automates repetitive PDF tasks. With an intuitive interface and straightforward execution, PDF Tools is ideal for users who want to manage their PDF workflows efficiently and programmatically.
 ## :lock: Privacy First
